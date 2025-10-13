@@ -26,7 +26,6 @@ function wp_plugin_template_activate() {
     // Code to run on plugin activation
     flush_rewrite_rules();
 }
-register_activation_hook( __FILE__, 'wp_plugin_template_activate' );
 
 /**
  * Plugin deactivation hook
@@ -35,4 +34,3 @@ function wp_plugin_template_deactivate() {
     // Code to run on plugin deactivation
     flush_rewrite_rules();
 }
-register_deactivation_hook( __FILE__, 'wp_plugin_template_deactivate' );

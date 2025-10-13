@@ -24,6 +24,10 @@ define( 'WP_PLUGIN_TEMPLATE_URL', plugin_dir_url( __FILE__ ) );
 // Include the functions file
 require_once WP_PLUGIN_TEMPLATE_PATH . 'includes/functions.php';
 
+// Register activation and deactivation hooks
+register_activation_hook( __FILE__, 'wp_plugin_template_activate' );
+register_deactivation_hook( __FILE__, 'wp_plugin_template_deactivate' );
+
 // Enqueue styles and scripts
 add_action( 'wp_enqueue_scripts', 'wp_plugin_template_enqueue_assets' );
 
