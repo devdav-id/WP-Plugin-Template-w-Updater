@@ -51,9 +51,5 @@ function wp_plugin_template_enqueue_assets() {
 add_action( 'wp_enqueue_scripts', 'wp_plugin_template_enqueue_assets' );
 
 // Register activation and deactivation hooks
-if ( function_exists( 'wp_plugin_template_activate' ) ) {
-    register_activation_hook( __FILE__, 'wp_plugin_template_activate' );
-}
-if ( function_exists( 'wp_plugin_template_deactivate' ) ) {
-    register_deactivation_hook( __FILE__, 'wp_plugin_template_deactivate' );
-}
+register_activation_hook( __FILE__, 'wp_plugin_template_activate' );
+register_deactivation_hook( __FILE__, 'wp_plugin_template_deactivate' );
