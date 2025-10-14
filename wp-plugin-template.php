@@ -3,7 +3,7 @@
  * Plugin Name: WP Plugin Template
  * Plugin URI: https://github.com/devdav-id/WP-Plugin-Template-w-Updater
  * Description: Basic WordPress Plugin Empty Template with Update Checker
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Your Name
  * Author URI: https://github.com/devdav-id
  * License: GPL v2 or later
