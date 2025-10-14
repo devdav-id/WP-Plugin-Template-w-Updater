@@ -3,12 +3,14 @@
  * Plugin Name: WP Plugin Template
  * Plugin URI: https://github.com/devdav-id/WP-Plugin-Template-w-Updater
  * Description: Basic WordPress Plugin Empty Template with Update Checker
- * Version: 1.0.1
+ * Version: 1.0.2
  * Author: Your Name
  * Author URI: https://github.com/devdav-id
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: wp-plugin-template
+ * GitHub Plugin URI: devdav-id/WP-Plugin-Template-w-Updater
+ * GitHub Plugin Folder: 
  */
 
 // If this file is called directly, abort.
@@ -17,12 +19,20 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 // Define plugin constants
-define( 'WP_PLUGIN_TEMPLATE_VERSION', '1.0.0' );
+define( 'WP_PLUGIN_TEMPLATE_VERSION', '1.0.1' );
 define( 'WP_PLUGIN_TEMPLATE_PATH', plugin_dir_path( __FILE__ ) );
 define( 'WP_PLUGIN_TEMPLATE_URL', plugin_dir_url( __FILE__ ) );
 
 // Include the functions file
 require_once WP_PLUGIN_TEMPLATE_PATH . 'includes/functions.php';
+
+// Include and initialize the GitHub updater
+require_once WP_PLUGIN_TEMPLATE_PATH . 'includes/wordpress-plugin-updater.php';
+
+// Initialize the updater with this plugin file
+if (class_exists('AW_GitHub_Plugin_Updater')) {
+    new AW_GitHub_Plugin_Updater(__FILE__);
+}
 
 /**
  * Enqueue plugin assets (CSS and JavaScript)
