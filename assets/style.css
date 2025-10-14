@@ -1,0 +1,23 @@
+/**
+ * WP Plugin Template Styles
+ *
+ * @package WP_Plugin_Template
+ */
+
+/* Add your custom styles here */
+
+.wp-plugin-template-container {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.wp-plugin-template-container h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.wp-plugin-template-container p {
+    color: #666;
+    line-height: 1.6;
+}
